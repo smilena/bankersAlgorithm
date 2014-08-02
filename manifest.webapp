@@ -1,0 +1,13 @@
+{
+  "name": "Algoritmo del Banquero",
+  "description": "Simulación algoritmo del banquero para evitar interbloqueo.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Sandra Guevara",
+    "url": ""
+  },
+  "default_locale": "en"
+}

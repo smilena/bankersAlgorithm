@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Algoritmo del Banquero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Algoritmo del Banquero</a>
+          <div class="nav-collapse collapse">           
+            
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        
+        <div class="span11">
+          <div class="hero-unit" id="RR">
+            <h3>Algoritmo Banquero </h3>
+            
+            <div>
+             
+                <span>Generar recursos</span>    
+                <a class="btn btn-success btn-small" id="generarRecursos" href="#">Generar recursos&raquo;</a><br>
+                <span>Recursos existentes</span><br>                
+                <span>R<sub>1</sub></span>
+                <span id="valorR1"></span>
+                <span>R<sub>2</sub></span> 
+                <span id="valorR2"></span>    
+                <span>R<sub>3</sub></span> 
+                <span id="valorR3"></span>   
+                <span>R<sub>4</sub></span> 
+                <span id="valorR4"></span>  <br>   
+                <span>Recursos disponibles</span><br> 
+                <span>R<sub>1</sub></span>
+                <span id="disponiblesR1"></span> 
+                <span>R<sub>2</sub></span> 
+                <span id="disponiblesR2"></span>    
+                <span >R<sub>3</sub></span> 
+                <span id="disponiblesR3"></span>   
+                <span>R<sub>4</sub></span> 
+                <span id="disponiblesR4"></span>  <br> 
+                <span>Matriz necesarios</span>  <br>
+                <table class="table table-hover span12" id="tablaProcesos">
+
+                </table>     <br>    
+              <a class="btn btn-success btn-small" id="simular" href="#">Iniciar Simulacion&raquo;</a><br>
+              <div id="contenedorSimulacion" class="span12">
+
+                <span>Utilizados</span><br>
+              
+                <table class="table table-hover span12" id="utilizados">
+                    <tr class="noRemover">
+                      <th>Proceso</th>
+                      <th>R<sub>1</sub></th>
+                      <th>R<sub>2</sub></th>
+                      <th>R<sub>3</sub></th>
+                      <th>R<sub>4</sub></th>
+                      </tr>
+                  </table>
+
+
+                <span>Necesarios</span><br>
+                  <table class="table table-hover span12" id="necesarios">
+                    <tr class="noRemover">
+                      <th>Proceso</th>
+                      <th>R<sub>1</sub></th>
+                      <th>R<sub>2</sub></th>
+                      <th>R<sub>3</sub></th>
+                      <th>R<sub>4</sub></th>
+                      <th>Terminado</th>
+                    </tr> 
+                </table> <br>    
+                
+                <span>Disponibles</span><br>
+                  <table class="table table-hover span12" id="disponibles">
+                    <tr class="noRemover">
+                      <th>Sistema</th>
+                      <th>R<sub>1</sub></th>
+                      <th>R<sub>2</sub></th>
+                      <th>R<sub>3</sub></th>
+                      <th>R<sub>4</sub></th>
+                      </tr>
+                  </table>  <br>   
+                  <p id="estado"></p>
+                
+              </div>
+              
+            </div> 
+            <!--<div class="span11" id="lineaTiempo">
+              
+            </div> LINEA DE TIEMPO EN CPU-->
+
+            <div class="span12">
+              
+            </div>
+            <div class="span12">
+         
+            </div>
+            
+          </div>    
+          
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>Sandra Guevara - Sistemas Operativos - Universidad Distrital - Bogota, Colombia</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+     <script src="js/device.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script src="js/banquero.js"></script>
+  </body>
+</html>
